@@ -1,0 +1,14 @@
+{
+  "name": "Pruebas-mqtt",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "mqtt.cool-web-client": "^1.0.0"
+  },
+   "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
