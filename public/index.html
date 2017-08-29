@@ -1,0 +1,23 @@
+<html>
+<head>
+  <script src="js/mqtt.cool.js"></script> 
+</head>
+<script type="text/javascript">
+	debugger;
+mqttcool.openSession('http://localhost:1883', '', '', {
+ 
+  onConnectionSuccess: function(mqttCoolSession) {
+ 
+    var client = mqttCoolSession.createClient('a', '050522ee409c4c2a86824b406e7ddad3');
+ 
+    client.connect({
+      onSuccess: function() {
+        console.log("Connected!");
+      }
+    });
+ //
+  }
+});
+
+</script>
+</html>
