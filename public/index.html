@@ -3,21 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <h1>Real Time</h1>
-<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+<script src="/socket.io/socket.io.js "></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="jquery/iphone-style-checkboxes.js"></script>
 <link rel="stylesheet" href="style.css">
 <script>
   $(document).ready(function() {
-        $(':checkbox').iphoneStyle({
-            onChange: function(elem,val) {
-                if (val) {
+    debugger;
+
+
+    $('#inactivelist').change(function () {
+           
+
+                if ($('#inactivelist').val()) {
                     socket.emit('publish', {topic:"led",payload:"on"});
                 } else {
                     socket.emit('publish', {topic:"led",payload:"off"});
                 }
-            }
-        });
+     });
+
     });
 </script>
 <script>
@@ -49,7 +53,7 @@
           LED:
         </td>
         <td>
-          <input name="led" checked='checked' class='yesno' type='checkbox' />
+          <input name="led" checked='checked' id="inactivelist" class='yesno' type='checkbox' />
         </td>
       </tr>
     </table>
