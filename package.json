@@ -7,7 +7,7 @@
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "mosca": "^2.5.2",
-    "mqtt": "^2.12.0",
+    "mqtt": "^2.12.1",
     "mqtt.cool-web-client": "^1.0.0",
     "web-mqtt-client": "^1.3.1"
   },
